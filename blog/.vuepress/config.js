@@ -44,7 +44,7 @@ module.exports = {
           link: "https://policies.google.com/privacy?hl=en-US",
         },
         {
-          text: "MIT Licensed | Copyright © 2018-present Vue.js",
+          text: "MIT Licensed | Copyright © 2020-present shizuku",
           link: "https://opensource.org/licenses/MIT",
         },
       ],
@@ -63,4 +63,14 @@ module.exports = {
     lengthPerPage: "5", // Maximum number of posts per page.
     layout: "Pagination", // Layout for pagination page
   },
+  plugins: [
+    [
+      "vuepress-plugin-mathjax",
+      {
+        macros: {
+          "\\Z": "\\mathbb{Z}",
+        },
+      },
+    ],
+  ],
 };

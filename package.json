@@ -1,18 +1,26 @@
 {
   "name": "blog",
-  "version": "1.0.0",
-  "main": "index.js",
-  "homepage":"https://shizuku.github.io/blog/",
-  "author": "shizuku",
-  "license": "MIT",
+  "version": "0.0.1",
+  "description": "",
   "private": true,
-  "devDependencies": {
-    "@vuepress/plugin-search": "^1.5.4",
-    "@vuepress/theme-blog": "^2.3.2",
-    "vuepress": "^1.5.4"
+  "main": "index.js",
+  "authors": {
+    "name": "shizuku",
+    "email": "2112165916@qq.com"
   },
+  "homepage": "https://shizuku.github.io/blog/",
+  "repository": "https://github.com/shizuku/blog/",
   "scripts": {
     "dev": "vuepress dev blog",
-    "build": "vuepress build blog"
+    "build": "vuepress build blog",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d blog/.vuepress/dist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/theme-blog": "^2.1.0",
+    "gh-pages": "^3.1.0",
+    "vuepress": "^1.3.1",
+    "vuepress-plugin-mathjax": "^1.2.8"
   }
 }
